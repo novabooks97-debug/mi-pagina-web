@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Visión Subacuática: Tiburón vs Humano</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- Iniciamos en modo tiburón por defecto -->
+<body class="modo-tiburon">
+
+    <!-- Aviso de rotación para dispositivos móviles -->
+    <div id="aviso-rotacion" class="aviso-rotacion">
+        <div class="contenido-aviso">
+            <p>📱 Por favor, rota tu dispositivo</p>
+            <p>Modo horizontal recomendado</p>
+        </div>
+    </div>
+
+    <!-- Control de pantalla para la exposición -->
+    <button id="btn-cambiar-vision" class="btn-control">Alternar Visión</button>
+
+    <!-- Contenedor visor de la cámara -->
+    <div class="visor-camara">
+        <!-- Video fotorrealista en bucle infinito -->
+        <video autoplay muted loop playsinline id="video-oceano" class="video-fondo">
+            <source src="./imagenes/Video de relajación - Sonido bajo el agua nadando con un hermoso cardumen de peces 2_30 hrs..mp4" type="video/mp4">
+            Tu navegador no soporta reproducción de video local.
+        </video>
+    </div>
+
+    <!-- Filtro de máscara esférica (Ojo de Pez) -->
+    <div class="capa-optica"></div>
+
+    <!-- Interfaz de Datos Científicos (HUD) -->
+    <div class="hud-cientifico" id="hud-texto">
+        <p><strong>MODO:</strong> VISTA DE DEPREDADOR (Carcharodon carcharias)</p>
+        <p><strong>ESPECTRO:</strong> MONOCROMÁTICO (0% CONOS DE COLOR)</p>
+        <p><strong>ÓPTICA:</strong> ENFOQUE CENTRAL / PERIFERIA DIFUSA</p>
+        <p><strong>RESOLUCIÓN:</strong> BAJA (PROCESAMIENTO DE SILUETAS Y CONTRASTE)</p>
+    </div>
+
+    <script src="css/js/main.js"></script>
+</body>
+</html>
